@@ -1,9 +1,13 @@
-import tkinter as t
-from tkinter import scrolledtext
+try:
+    import tkinter as t
+    from tkinter.filedialog import asksaveasfile, SaveAs, askopenfile
+    from tkinter import scrolledtext
+except:
+    print("Ensure that tkinter is installed")
 import os
-from tkinter.filedialog import asksaveasfile, SaveAs, askopenfile
 import sys
 from io import TextIOWrapper
+
 class Notepad():
     def __init__(self) -> None:
         global win
